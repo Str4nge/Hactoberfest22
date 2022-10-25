@@ -1,0 +1,25 @@
+import java.util.*;
+public class Fibonacci1 {
+	int num;
+	int fib=0;
+	int fib1=1;
+	int fib2;
+	public void output(int n,int f,int f1,int f2) {
+		System.out.print(f+" "+f1);
+		for(int i=0;i<=n;i++) {
+			f2=f+f1;
+			f=f1;
+			f1=f2;
+			System.out.print(" "+f1);
+		}
+	}
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		Fibonacci1 F = new Fibonacci1();
+		System.out.println("Enter number of Fibonacci Series:");
+		F.num=sc.nextInt();
+		F.output(F.num,F.fib,F.fib1,F.fib2);
+
+	}
+
+}
