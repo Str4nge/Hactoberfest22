@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+
+public class Prime1 {	
+	int count = 0;
+	int num;
+	public String output(int n) {
+			
+		for(int i=1; i<=n; i++) {
+				if(n%i==0) {
+					count=count+1;
+				}
+			}
+			if(count==2) {
+				return "It is a prime number";
+			}
+			else {
+				return "It is not a prime number";
+			}
+		}
+	public static void main(String[] args) {
+			Scanner sc = new Scanner(System.in);
+			Prime1 p = new Prime1();
+			System.out.println("Enter Number:");
+			int a = sc.nextInt();
+			//p.output(a);
+			System.out.println(p.output(a));
+			
+
+		}
+
+	}
